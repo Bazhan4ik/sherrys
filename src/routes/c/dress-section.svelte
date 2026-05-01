@@ -1,7 +1,5 @@
 <script lang="ts">
 	import IMG from "$lib/assets/picture1_full.jpg"
-
-
 </script>
 
 <section id="dresses" class="app">
@@ -9,15 +7,16 @@
 	<h1 class="dresses-title">Just in: <br> <em>spring dresses</em>, <br> fresh on the floor.</h1>
 	<p class="dresses-subtitle">Hand-picked florals, breezy silhouettes, and easy everyday pieces. Try on at the shop.</p>
 
-	<img src={IMG} alt="new-dresses">
-
-
+	<div class="image-container">
+		<img src={IMG} alt="new-dresses">
+	</div>
 </section>
 
 <style lang="scss">
 	@use "./../../pallette.scss" as pallette;
 
 	.app {
+		margin-top: 24px;
 		padding: 32px 20px 8px;
 	}
 	.date {
@@ -38,9 +37,21 @@
 		max-width: 380px;
 	}
 
-	img {
+	.image-container {
 		width: 100%;
+		margin-top: 18px;
+		position: relative;
 
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			background: linear-gradient(to bottom, transparent 0%, transparent calc(100% - 48px), pallette.$bg 100%);
+		}
 	}
-
+	.image-container img {
+		width: 100%;
+		border-radius: 8px;
+	}
 </style>

@@ -1,7 +1,5 @@
 <script lang="ts">
-	import IMG from "$lib/assets/picture1.jpg";
 	import IMG_full from "$lib/assets/picture1_full.jpg";
-	import IMG_item1 from "$lib/assets/item1.png";
 </script>
 
 
@@ -27,23 +25,6 @@
 			<img src={IMG_full} alt="pic1">
 		</div>
 	</div>
-
-
-	<!-- <div class="items"> -->
-	<!-- 	<div class="header"> -->
-	<!-- 		<p>Easy, flattering fits</p> -->
-	<!-- 	</div> -->
-	<!-- 	<div class="item"> -->
-	<!-- 		<div class="image"> -->
-	<!-- 			<img src={IMG_item1} alt="item1"> -->
-	<!-- 		</div> -->
-	<!-- 		<div class="info"> -->
-	<!-- 			<div class="name"><p>Flowy florals</p></div> -->
-	<!-- 		</div> -->
-	<!-- 	</div> -->
-	<!-- </div> -->
-
-
 </div>
 
 
@@ -62,6 +43,8 @@
 	$header-height: 142px;
 	$header-to-bottom: 12px;
 	.header {
+		$header-padding-left: 24px;
+
 		position: absolute;
 		bottom: $header-to-bottom;
 		left: 0;
@@ -71,7 +54,6 @@
 		overflow: visible;
 		display: flex;
 		flex-direction: column;
-		padding-left: 24px;
 		gap: 12px;
 
 		.big p {
@@ -79,8 +61,11 @@
 			font-size: 1.4rem;
 			color: white;
 			letter-spacing: 3px;
+			padding-left: $header-padding-left;
 		}
 		.small a, .small p {
+
+			padding-left: $header-padding-left;
 			font-family: "Quintessential", serif;
 			font-size: 1.0rem;
 			color: rgb(200, 200, 200);
@@ -94,7 +79,7 @@
 			justify-content: center;
 			gap: 8px;
 			margin-top: 24px;
-			.small p { font-size: 0.95rem; color: rgb(180, 180, 180); }
+			.small p { font-size: 0.95rem; padding-left: 0; color: rgb(180, 180, 180); }
 			span {
 				display: flex; justify-content: center; align-items: center;
 				color: rgb(180, 180, 180);
@@ -122,49 +107,6 @@
 		width: 100%;
 		z-index: 0;
 	}
-
-	.items {
-		position: relative;
-		z-index: 1;
-		padding-top: 120px;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		background-color: #79645b;
-
-		background: linear-gradient(0deg,rgba(#79645b, 1) calc(100% - 80px), rgba(255, 255, 255, 0) 100%);
-		margin-top: -100px;
-	}
-
-	.items .header {
-		background-color: #79645b;
-		box-shadow: none;
-		p {
-			color: #e5d3cc;
-			font-family: "Quintessential", serif;
-			letter-spacing: 0;
-		}
-	}
-	.item {
-		// margin-top: -80px;
-		max-width: 300px;
-		width: 100%;
-		background-color: #efe5e0;
-
-		.image {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-		}
-		.image img {
-			width: 100%;
-			max-width: 200px;
-		}
-	}
-	
 </style>
 
 

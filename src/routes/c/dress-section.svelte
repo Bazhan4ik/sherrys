@@ -3,9 +3,11 @@
 </script>
 
 <section id="dresses" class="app">
-	<div class="date">April 25</div>
-	<h1 class="dresses-title">Just in: <br> <em>spring dresses</em>, <br> fresh on the floor.</h1>
-	<p class="dresses-subtitle">Hand-picked florals, breezy silhouettes, and easy everyday pieces. Try on at the shop.</p>
+	<div class="padding">
+		<div class="date">April 25</div>
+		<h1 class="dresses-title">Just in: <br> <em>spring dresses</em>, <br> fresh on the floor.</h1>
+		<p class="dresses-subtitle">Hand-picked florals, breezy silhouettes, and easy everyday pieces. Try on at the shop.</p>
+	</div>
 
 	<div class="image-container">
 		<img src={IMG} alt="new-dresses">
@@ -16,9 +18,9 @@
 	@use "./../../pallette.scss" as pallette;
 
 	.app {
-		margin-top: 24px;
-		padding: 32px 20px 8px;
+		padding: 32px 0;
 	}
+	.padding { padding: 0 20px; }
 	.date {
 		font-size: 0.625rem; letter-spacing: 0.28rem; font-family: "Inter", sans-serif;
 		text-transform: uppercase;
@@ -47,11 +49,11 @@
 			position: absolute;
 			top: 0; left: 0;
 			width: 100%; height: 100%;
-			background: linear-gradient(to bottom, transparent 0%, transparent calc(100% - 48px), pallette.$bg 100%);
+			background: linear-gradient(to bottom, transparent 0%, transparent calc(100% - 60px), pallette.$bg 100%);
 		}
 	}
 	.image-container img {
 		width: 100%;
-		border-radius: 8px;
+		// border-radius: 8px;
 	}
 </style>

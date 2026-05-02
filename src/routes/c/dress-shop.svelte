@@ -4,6 +4,9 @@
 </script>
 
 
+<div class="title">
+	<p>See what's new:</p>
+</div>
 <section id="dress-items" class="app">
 	<button class="product">
 		<div class="image-container">
@@ -47,12 +50,19 @@
 <style lang="scss">
 	@use "./../../pallette.scss" as pallette;
 	.app {
+		z-index: 1;
 		padding: 24px 20px 36px;
 		display: grid; gap: 24px; grid-template-columns: 1fr 1fr;
 	}
 
+	.title {
+		padding: 0 20px;
+		p {
+			font-family: "Cormorant Garamond", serif; font-size: 1.6rem;
+		}
+	}
 	button.product {
-		aspect-ratio: 3 / 4;
+		aspect-ratio: 3 / 5;
 		background: none; border: none;
 		cursor: pointer;
 		display: flex; flex-direction: column; align-items: flex-start;
@@ -60,12 +70,14 @@
 
 	.image-container {
 		background-color: pallette.$paper;
+		z-index: 1;
 	}
 	.image-container, img {
 		border-radius: 8px;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		z-index: 1;
 	}
 
 	.info {

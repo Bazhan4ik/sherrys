@@ -18,6 +18,7 @@
 	@use "./../../pallette.scss" as pallette;
 
 	.app {
+		z-index: 0;
 		padding: 32px 0;
 	}
 	.padding { padding: 0 20px; }
@@ -49,11 +50,12 @@
 			position: absolute;
 			top: 0; left: 0;
 			width: 100%; height: 100%;
-			background: linear-gradient(to bottom, transparent 0%, transparent calc(100% - 60px), pallette.$bg 100%);
+			background: linear-gradient(to bottom, transparent 0%, transparent calc(100% - 160px), pallette.$bg 100%);
 		}
 	}
 	.image-container img {
 		width: 100%;
+		z-index: 0;
 		// border-radius: 8px;
 	}
 </style>
